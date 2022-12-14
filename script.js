@@ -3,6 +3,10 @@ const addBtn = document.querySelector('#addBtn');
 const element = document.getElementById('datePicker');
 element.valueAsNumber = Date.now()-(new Date()).getTimezoneOffset()*60000;
 
+function filterActivity(){
+    let inputFilter = document.getElementById("inputFilter");   
+}
+
 function addActivity()
 {
     
@@ -20,7 +24,7 @@ function addActivity()
     removeBtn.innerHTML = "Remove";    
     removeBtn.addEventListener("click", function(){
         this.parentNode.remove();
-    })
+    });
 
 
     let activityListItemName = document.createElement("span");
