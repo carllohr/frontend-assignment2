@@ -1,4 +1,5 @@
 const addBtn = document.querySelector('#addBtn');
+const removeBtn = document.getElementById("removeBtn");
 
 const element = document.getElementById('datePicker');
 element.valueAsNumber = Date.now()-(new Date()).getTimezoneOffset()*60000;
@@ -43,9 +44,9 @@ function addActivity()
 
 }
 
-function removeActivity(){
-
-}
+removeBtn.addEventListener("click", function(){
+    this.parentNode.remove();
+});
 
 
 
