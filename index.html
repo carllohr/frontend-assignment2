@@ -30,9 +30,11 @@
       <br />
       <div class="acitivies-filter">
         <label for="filter">Filter by:</label>
-        <input id="inputFilter" type="text" />
-        <input type="radio" /> House work <input type="radio" /> Yard work
-        <input type="radio" /> Job related
+        <input id="inputFilter" type="text" onkeyup="filterActivity(inputFilter.value)" />
+        <input type="radio" id="radioAll" /> All
+        <input type="radio" id="radioHouse" /> House work 
+        <input type="radio" id="radioYard"/> Yard work
+        <input type="radio" id="radioJob"/> Job related
         <br />
       </div>
       <div class="activities" id="a-content">
@@ -42,11 +44,23 @@
           <span>Category</span>
         </div>
         <div class="activity-list-item">
-            <span>Clean</span>
-            <span>2022-12-24</span>
-            <span>House work</span>
-            <button id="removeBtn">Remove</button>
+            <span class="activity-item">Clean</span>
+            <span class="date-item">2022-12-24</span>
+            <span class="category-item">House work</span>
+            <button class="removeBtn">Remove</button>
         </div>
+        <div class="activity-list-item">
+            <span class="activity-item">Mow the lawn</span>
+            <span class="date-item">2022-12-23</span>
+            <span class="category-item">Yard work</span>
+            <button class="removeBtn">Remove</button>
+        </div>
+        <div class="activity-list-item">
+          <span class="activity-item">Create presentation</span>
+          <span class="date-item">2022-12-05</span>
+          <span class="category-item">Job related</span>
+          <button class="removeBtn">Remove</button>
+      </div>
       </div>
     </div>
     <script src="script.js"></script>

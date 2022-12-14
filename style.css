@@ -8,11 +8,35 @@ header{
     justify-content: center;
 }
 
-.activities-list-header span{
-    margin: 20px;
-    font-size: 40px;
+.activities-list-header{
+    display: flex;
+    font-size: 35px;
+    margin-right: 20px;
 }
-.activity-list-item span{
-    margin: 45px;
+.activities-list-header span{
+    display: flex;
+    font-size: 35px;
+    margin-right: 20px;
+    width: 155px;
 }
 
+.activity-list-item{
+    display: flex;
+    margin-top: 5px;
+}
+
+.activity-item{
+    width: 165px;
+}
+
+.date-item{
+    width: 185px;
+}
+
+.category-item{
+    width: 155px;
+}
+
+.hide{
+    display: none;
+}
