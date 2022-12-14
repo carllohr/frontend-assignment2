@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>To do app</h1>
+    </header>
+    <div class="container">
+      <div>
+        <label for="inputActivity">Activity: </label>
+        <br />
+        <input id="inputActivity" type="text" />
+        <input id="datePicker" type="date" />
+        <select name="category" id="inputCategory">
+          <option value="House work">House work</option>
+          <option value="Yard work">Yard work</option>
+          <option value="Job related">Job related</option>
+        </select>
+        <br /><br />
+        <button type="button" id="addBtn" onclick="addActivity()">Add</button>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <div class="acitivies-filter">
+        <label for="filter">Filter by:</label>
+        <input id="filter" type="text" />
+        <input type="radio" /> House work <input type="radio" /> Yard work
+        <input type="radio" /> Job related
+        <br />
+      </div>
+      <div class="activities" id="a-content">
+        <div class="activities-list-header">
+            <span>Activity</span>
+            <span>Date</span>
+            <span>Category</span>
+        </div>
+
+        <!--<div class="activities-view">
+            
+        </div> !-->
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
