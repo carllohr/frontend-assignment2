@@ -5,10 +5,13 @@ const radioB = document.getElementById("radioHouse");
 const radioC = document.getElementById("radioYard");
 const radioD = document.getElementById("radioJob");
 
+const input = document.getElementById("inputActivity");
+
 const element = document.getElementById('datePicker');
 element.valueAsNumber = Date.now()-(new Date()).getTimezoneOffset()*60000;
 
 let todaysDate = new Date().toLocaleDateString();
+let radioButtons = document.getElementsByName("filter-button");
 
 function radioFilter(radioValue)
 {
@@ -19,17 +22,17 @@ function radioFilter(radioValue)
         let itemName = listItem.querySelector(".category-item").innerText;
         if(itemName == radioValue.value)
         {
-            listItem.classList.remove("hide");
+            listItem.classList.remove("hide-radio");
         }
         else
         {
-            listItem.classList.add("hide");
+            listItem.classList.add("hide-radio");
         }
         if(radioValue.value == "All"){
-            listItem.classList.remove("hide");
+            listItem.classList.remove("hide-radio");
         }
     })
-}
+} 
 
 function filterActivity(filterValue)
 {
@@ -110,4 +113,8 @@ for (let i = 0; i < activityDates.length; i++){
     }
 }
 
-
+input.addEventListener("keypress", function(event){
+    if(event.key === "Enter"){
+        addBtn.click();
+    }
+});
