@@ -61,8 +61,8 @@ function addActivity()
     let activityListEl = document.getElementById("a-content");
 
 
-    if(inputActivity != "")
-    {
+    if(inputActivity == "") return;
+    
 
     let activityListItem = document.createElement("div");
     activityListItem.classList.add("activity-list-item");
@@ -95,7 +95,7 @@ function addActivity()
     activityListItem.appendChild(removeBtn);
 
     document.getElementById("inputActivity").value = "";
-    }
+    
 }
 
 addEventListener("keypress", function(event){
