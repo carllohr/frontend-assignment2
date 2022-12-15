@@ -40,3 +40,7 @@ header{
 .hide{
     display: none;
 }
+
+.hide-radio{
+    display: none;
+}
