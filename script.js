@@ -5,16 +5,34 @@ const radioB = document.getElementById("radioHouse");
 const radioC = document.getElementById("radioYard");
 const radioD = document.getElementById("radioJob");
 
-
-radioA.checked = true;
-
 const element = document.getElementById('datePicker');
 element.valueAsNumber = Date.now()-(new Date()).getTimezoneOffset()*60000;
 
 let todaysDate = new Date().toLocaleDateString();
 
-function filterActivity(filterValue){
-    console.log(filterValue);
+function radioFilter(radioValue)
+{
+    let listItems = document.querySelectorAll(".activity-list-item");
+    
+    listItems.forEach((listItem) => 
+    {
+        let itemName = listItem.querySelector(".category-item").innerText;
+        if(itemName == radioValue.value)
+        {
+            listItem.classList.remove("hide");
+        }
+        else
+        {
+            listItem.classList.add("hide");
+        }
+        if(radioValue.value == "All"){
+            listItem.classList.remove("hide");
+        }
+    })
+}
+
+function filterActivity(filterValue)
+{
     let listItems = document.querySelectorAll(".activity-list-item");
     
     listItems.forEach((listItem) => 
@@ -28,11 +46,7 @@ function filterActivity(filterValue){
         {
             listItem.classList.remove("hide");
         }
-         
-    })
-
-    
-    
+    }) 
 }
 
 function addActivity()
@@ -74,9 +88,9 @@ function addActivity()
     activityListItem.appendChild(activityListItemDate);
     activityListItem.appendChild(activityListItemCategory);
     activityListItem.appendChild(removeBtn);
-   
-    
 
+    document.getElementById("inputActivity").value = "";
+   
 }
 
 
@@ -96,14 +110,4 @@ for (let i = 0; i < activityDates.length; i++){
     }
 }
 
-function radioFilter()
-{
-    if(radioB.checked == true){
-        const categories = document.getElementsByClassName("category-item");
-        for(let i = 0; i < categories.length; i++)
-        {
-            console.log(categories[i]);
-        }
-        }
-   
-}
+
