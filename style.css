@@ -8,6 +8,10 @@ header{
     justify-content: center;
 }
 
+.activities{
+    overflow-y: scroll;
+}
+
 .activities-list-header{
     display: flex;
     font-size: 35px;

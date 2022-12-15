@@ -8,70 +8,98 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>To do app</h1>
-    </header>
-    <div class="container">
-      <div>
-        <label for="inputActivity">Activity: </label>
-        <br />
-        <input id="inputActivity" type="text" />
-        <input id="datePicker" type="date" />
-        <select name="category" id="inputCategory">
-          <option value="House work">House work</option>
-          <option value="Yard work">Yard work</option>
-          <option value="Job related">Job related</option>
-        </select>
-        <br /><br />
-        <button type="button" id="addBtn" onclick="addActivity()">Add</button>
-      </div>
-      <br />
-      <hr />
-      <br />
-      <div class="acitivies-filter">
-        <label for="filter">Filter by:</label>
-        <input id="inputFilter" type="text" onkeyup="filterActivity(inputFilter.value)" />
-        
-        <input type="radio" id="radioAll" name="filter-button" onchange="radioFilter(this)" value="All"/> 
-        <label for="radioAll">All</label>
-        
-        <input type="radio" id="radioHouse" name="filter-button" onchange="radioFilter(this)" value="House work"/> 
-
-        <label for="radioHouse">House work</label>
-       
-        <input type="radio" id="radioYard" name="filter-button" onchange="radioFilter(this)" value="Yard work"/> 
-        <label for="radioYard">Yard work</label>
-        
-        <input type="radio" id="radioJob" name="filter-button" onchange="radioFilter(this)" value="Job related"/> 
-        <label for="radioJob">Job related</label>
-        <br />
-      </div>
-      <div class="activities" id="a-content">
-        <div class="activities-list-header">
-          <span>Activity</span>
-          <span>Date</span>
-          <span>Category</span>
+      <header>
+        <h1>To do app</h1>
+      </header>
+      <div class="container">
+        <div>
+          <label for="inputActivity">Activity: </label>
+          <br />
+          <input id="inputActivity" type="text" />
+          <input id="datePicker" type="date" />
+          <select name="category" id="inputCategory">
+            <option value="House work">House work</option>
+            <option value="Yard work">Yard work</option>
+            <option value="Job related">Job related</option>
+          </select>
+          <br /><br />
+          <button type="button" id="addBtn" onclick="addActivity()">Add</button>
         </div>
-        <div class="activity-list-item">
+        <br />
+        <hr />
+        <br />
+        <div class="acitivies-filter">
+          <label for="filter">Filter by:</label>
+          <input
+            id="inputFilter"
+            type="text"
+            onkeyup="filterActivity(inputFilter.value)"
+          />
+
+          <input
+            type="radio"
+            id="radioAll"
+            name="filter-button"
+            onchange="radioFilter(this)"
+            value="All"
+          />
+          <label for="radioAll">All</label>
+
+          <input
+            type="radio"
+            id="radioHouse"
+            name="filter-button"
+            onchange="radioFilter(this)"
+            value="House work"
+          />
+
+          <label for="radioHouse">House work</label>
+
+          <input
+            type="radio"
+            id="radioYard"
+            name="filter-button"
+            onchange="radioFilter(this)"
+            value="Yard work"
+          />
+          <label for="radioYard">Yard work</label>
+
+          <input
+            type="radio"
+            id="radioJob"
+            name="filter-button"
+            onchange="radioFilter(this)"
+            value="Job related"
+          />
+          <label for="radioJob">Job related</label>
+          <br />
+        </div>
+        <div class="activities" id="a-content">
+          <div class="activities-list-header">
+            <span>Activity</span>
+            <span>Date</span>
+            <span>Category</span>
+          </div>
+          <div class="activity-list-item">
             <span class="activity-item">Clean</span>
             <span class="date-item">2022-12-24</span>
             <span class="category-item">House work</span>
             <button class="removeBtn">Remove</button>
-        </div>
-        <div class="activity-list-item">
+          </div>
+          <div class="activity-list-item">
             <span class="activity-item">Mow the lawn</span>
             <span class="date-item">2022-12-23</span>
             <span class="category-item">Yard work</span>
             <button class="removeBtn">Remove</button>
+          </div>
+          <div class="activity-list-item">
+            <span class="activity-item">Create presentation</span>
+            <span class="date-item">2022-12-05</span>
+            <span class="category-item">Job related</span>
+            <button class="removeBtn">Remove</button>
+          </div>
         </div>
-        <div class="activity-list-item">
-          <span class="activity-item">Create presentation</span>
-          <span class="date-item">2022-12-05</span>
-          <span class="category-item">Job related</span>
-          <button class="removeBtn">Remove</button>
       </div>
-      </div>
-    </div>
     <script src="script.js"></script>
   </body>
 </html>

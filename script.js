@@ -60,7 +60,9 @@ function addActivity()
     let inputDate = document.getElementById("datePicker").value;
     let activityListEl = document.getElementById("a-content");
 
-    
+
+    if(inputActivity != "")
+    {
 
     let activityListItem = document.createElement("div");
     activityListItem.classList.add("activity-list-item");
@@ -93,8 +95,14 @@ function addActivity()
     activityListItem.appendChild(removeBtn);
 
     document.getElementById("inputActivity").value = "";
-   
+    }
 }
+
+addEventListener("keypress", function(event){
+    if(event.key === "Enter"){
+        addBtn.click();
+    }
+});
 
 
 let i = 0;
@@ -113,8 +121,4 @@ for (let i = 0; i < activityDates.length; i++){
     }
 }
 
-input.addEventListener("keypress", function(event){
-    if(event.key === "Enter"){
-        addBtn.click();
-    }
-});
+
