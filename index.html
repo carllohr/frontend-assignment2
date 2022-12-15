@@ -31,10 +31,19 @@
       <div class="acitivies-filter">
         <label for="filter">Filter by:</label>
         <input id="inputFilter" type="text" onkeyup="filterActivity(inputFilter.value)" />
-        <input type="radio" id="radioAll" /> All
-        <input type="radio" id="radioHouse" /> House work 
-        <input type="radio" id="radioYard"/> Yard work
-        <input type="radio" id="radioJob"/> Job related
+        
+        <input type="radio" id="radioAll" name="filter-button" onchange="radioFilter(this)"/> 
+        <label for="radioAll">All</label>
+        
+        <input type="radio" id="radioHouse" name="filter-button" onchange="radioFilter(this)" value="House work"/> 
+
+        <label for="radioHouse">House work</label>
+       
+        <input type="radio" id="radioYard" name="filter-button" onchange="radioFilter(this)" value="Yard work"/> 
+        <label for="radioYard">Yard work</label>
+        
+        <input type="radio" id="radioJob" name="filter-button" onchange="radioFilter(this)" value="Job related"/> 
+        <label for="radioJob">Job related</label>
         <br />
       </div>
       <div class="activities" id="a-content">
